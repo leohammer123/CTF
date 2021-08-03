@@ -14,5 +14,5 @@
 ;SETTING_3 pe = verydraft\\n\\n[values]\\n\\n"]} 
 ```
 
-### we know that geeetech A10M is a printer,and it's the flag.
+### We know that geeetech A10M is a printer,and it's the flag.
 flag : geeetech A10M
