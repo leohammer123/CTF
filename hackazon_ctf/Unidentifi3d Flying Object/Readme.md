@@ -10,4 +10,4 @@
 ### We know that geeetech A10M is a printer,and it's the flag.
 flag : geeetech A10M<br><br><br>
 ## Layer by Layer
-### In the top part of the file 
+### Look at the [document](https://en.wikipedia.org/wiki/G-code),
