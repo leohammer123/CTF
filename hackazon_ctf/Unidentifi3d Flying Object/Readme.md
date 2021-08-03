@@ -12,3 +12,12 @@
 ;SETTING_3 name = Extra Fast #2\\ndefinition = fdmprinter\\n\\n[metadata]\\ntype
 ;SETTING_3  = quality_changes\\nsetting_version = 16\\nposition = 1\\nquality_ty
 ;SETTING_3 pe = verydraft\\n\\n[values]\\n\\n"]} '''
+```no-highlight
+重點，又被稱為斜體，在兩邊加上 *星號* 或是 _下劃線_ 。
+
+更強的重點，又稱為粗體，在兩邊加上 **兩個星號** 或是 __兩個下劃線__ 。
+
+也可以用 **星號與 _下劃線_** 結合重點。
+
+刪除線使用兩個波浪符號。 ~~刪除這個。~~
+```
