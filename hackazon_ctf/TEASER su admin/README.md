@@ -6,3 +6,5 @@
 ![GITHUB]( https://i.imgur.com/3Xr2JAh.jpg"圖片名稱")
 ## Here is the flag
 ![](https://i.imgur.com/jloCGXQ.png"")
+<br><br>
+flag:CTF{YOU-HAZ-ADMIN-FLAG}
