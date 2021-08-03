@@ -11,4 +11,4 @@
 flag : geeetech A10M<br><br><br>
 ## Layer by Layer
 ### Look at the [document](https://en.wikipedia.org/wiki/G-code),we know that gcode is a language that is telling the machine tool what type of action to perform
-### So I use [Ultimaker Cura 4.10](https://ultimaker.com/software/ultimaker-cura) to view the file.
+ So I use [Ultimaker Cura 4.10](https://ultimaker.com/software/ultimaker-cura) to view the file.
