@@ -1,6 +1,8 @@
 # Unidentifi3d Flying Object
 ## Printer 
-### After looking at the gocde content,we find some useful information in the ** end ** of the file.
+### After looking at the gocde content,we find some useful information in the 
+**end** 
+## of the file.
 ``` 
 ;SETTING_3 {"global_quality": "[general]\\nversion = 4\\nname = Extra Fast #2\\n
 ;SETTING_3 definition = geeetech_A10M\\n\\n[metadata]\\ntype = quality_changes\\
