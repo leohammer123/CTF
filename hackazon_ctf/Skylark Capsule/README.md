@@ -1,8 +1,10 @@
 # Skylark Capsule
 ## Tokenz
 ### First we can regist an account and log in.
-![](https://i.imgur.com/lqEUuyD.png)
+![](https://github.com/leohammer123/CTF/blob/main/hackazon_ctf/Skylark%20Capsule/4.png)
 ### There is a cookie named token,we can try to decode it by [jwt.io](https://jwt.io/).
-![](https://i.imgur.com/XDpFMGm.png)
-### 
-
+![](https://github.com/leohammer123/CTF/blob/main/hackazon_ctf/Skylark%20Capsule/1.png)
+### You can learn what is jwt at [here](https://jwt.io/introduction),so you can use john the ripper to find the secret key.
+![](https://github.com/leohammer123/CTF/blob/main/hackazon_ctf/Skylark%20Capsule/3.png)
+###Becauce i already crack it,you can crack it by command
+```john --wordlist=/usr/share/wordlists/rockyou.txt new```
