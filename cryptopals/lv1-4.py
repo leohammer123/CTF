@@ -1,12 +1,4 @@
 def get_english_score(input_bytes):
-    """Compares each input byte to a character frequency 
-    chart and returns the score of a message based on the
-    relative frequency the characters occur in the English
-    language.
-    """
-
-    # From https://en.wikipedia.org/wiki/Letter_frequency
-    # with the exception of ' ', which I estimated.
     character_frequencies = {
         'a': .08167, 'b': .01492, 'c': .02782, 'd': .04253,
         'e': .12702, 'f': .02228, 'g': .02015, 'h': .06094,
@@ -20,8 +12,6 @@ def get_english_score(input_bytes):
 
 
 def single_char_xor(input_bytes, char_value):
-    """Returns the result of each byte being XOR'd with a single value.
-    """
     output_bytes = b''
     for byte in input_bytes:
         output_bytes += bytes([byte ^ char_value])
@@ -29,10 +19,6 @@ def single_char_xor(input_bytes, char_value):
 
 
 def bruteforce_single_char_xor(ciphertext):
-    """Performs a singlechar xor for each possible value(0,255), and
-    assigns a score based on character frequency. Returns the result
-    with the highest score.
-    """
     potential_messages = []
     for key_value in range(256):
         message = single_char_xor(ciphertext, key_value)
