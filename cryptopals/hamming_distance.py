@@ -1,4 +1,3 @@
-# fisrt part
 str1 = 'this is a test'
 str2 = 'wokka wokka!!!'
 
@@ -12,4 +11,3 @@ for i in range(len(str1)):
 
 print(f'hamming distance is {distance}')
 
-# seconde part
