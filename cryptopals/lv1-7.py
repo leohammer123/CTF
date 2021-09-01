@@ -15,4 +15,4 @@ with open('cryptopals\\6.txt','r') as i:
     r = []
     for u in n:
             r.append(base64.b64decode(u.replace('\n','')))
-    print(r)
+    
