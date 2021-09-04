@@ -29,8 +29,10 @@ It compared the user input and thepw variable.
 # warm up 2
 
 This level is broken,so just type fail
-# warm up 
+# warm up 3
 
 You have to post a non-exist option , that sounds impossible, but you can directly change client side source code in browser.
 
-![picture]()
+![picture](https://github.com/leohammer123/CTF/blob/main/hax.tor/warm_up/img/3.png)
+
+# warm up 4
