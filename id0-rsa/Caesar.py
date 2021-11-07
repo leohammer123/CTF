@@ -28,6 +28,7 @@ for i in range(27):
         n = decrypt(cipher,i)
         score = get_english_score(n.encode())
         data ={
+            
             'plain_text':n,
             'score':score,
             'shift':i
