@@ -50,7 +50,9 @@ def input_string():
         n = i.read()
     return base64.b64decode(n.replace('\n','')).decode()
 
-print(input_string())
+def main():
+    cipher = input_string()
+    
 
 
 
