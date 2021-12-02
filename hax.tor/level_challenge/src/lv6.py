@@ -9,5 +9,5 @@ def single_char_xor(input_bytes, char_value):
 a= 'b1a593a5e2a5f6a5c6a5b6a511a5f3a532a5'
 a = codecs.decode(a,'hex')
 print(a)
-n = single_char_xor(a,int('5A',base=16)).decode('utf-8')
+n = single_char_xor(a,int('5A',base=16))
 print(n)

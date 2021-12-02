@@ -1,0 +1,219 @@
+char 0:
+function (index)
+    return math.abs(index - 24) == 5
+end
+char 1:
+function (index)
+    return index^2 - 27 * index + 176 == 0
+end
+char 2:
+function (index)
+    return index * index < 0;
+end
+char 3:
+function (index)
+    if index % 2 == 0 then
+        sum = 0
+        prod = 1
+        for i=1,index/2 do
+            sum = sum + i
+            prod = prod * i
+        end
+        return sum == prod and sum == index
+    else
+        str = tostring(index)
+        return index > 15 and string.reverse(str) == str
+    end
+end
+char 4:
+function (index)
+    return math.sin(index) > 1;
+end
+char 5:
+function (index)
+    return index == bit32.bxor(20, 30)
+end
+char 6:
+function (index)
+    return string.char(index) == "C"
+end
+char 7:
+function (index)
+    return index % 4 == 1 and math.abs(index - 19) < 3
+end
+char 8:
+function (index)
+    return index % 10 == 10
+end
+char 9:
+function (index)
+    is_prime = {}
+
+    for i = 1, 50 do
+        is_prime[i] = 1 ~= i
+    end
+    
+    for i = 2, 50 do
+        if is_prime[i] then
+            for j = i*i, 50, i do
+                is_prime[j] = false
+            end
+        end
+    end
+    
+    primes = {}
+    for i = 1, 50 do
+        if is_prime[i] then
+            table.insert(primes, i)
+        end
+    end
+
+    return index == primes[6]
+end
+char _:
+function (index)
+    l = {}
+    a = 1
+    for n=1, 10 do
+        l[n] = a
+        a = n*n - a
+    end
+    for n=6, 8 do
+        if l[n] == index then
+            return true
+        end
+    end
+    return false
+end
+char `:
+function (index)
+    return false;
+end
+char a:
+function (index)
+    return index > 35;
+end
+char b:
+function (index)
+    return os.date("*t", 10000000 * index).year > os.date("*t").year;
+end
+char c:
+function (index)
+    s = 1
+    for i=1, 5 do
+        s = s * 2
+    end
+    return index == 1 or index == s
+end
+char d:
+function (index)
+    return index * index + 4 * index + 2 < 0;
+end
+char e:
+function (index)
+    return index == 2^3
+end
+char f:
+function (index)
+    return index % 20 == 3
+end
+char g:
+function (index)
+    return index > 5 and index < 5;
+end
+char h:
+function (index)
+    div = math.floor(index / 10)
+    return (div == 1) and (div + index % 10 == 9)
+end
+char i:
+function (index)
+    return index < 1
+end
+char j:
+function (index)
+    return index - index > 0;
+end
+char k:
+function (index)
+    return index == 42;
+end
+char l:
+function (index)
+    return index > 24 and index < 27
+end
+char m:
+function (index)
+    return (index + 1) * (index - 1) ~= index * index - 1
+end
+char n:
+function (index)
+    a = index % 10
+    b = math.floor(index / 10)
+    return a * b == 2 and a + b == 3 and a > b
+end
+char o:
+function (index)
+    return 2 * index ~= index + index;
+end
+char p:
+function (index)
+    total = 0
+    for i=1,index do
+        total = total + i
+    end
+    return total > 750;
+end
+char q:
+function (index)
+    return "1 indexed languages" == "cool";
+end
+char r:
+function (index)
+    return index^3 - 45 * index^2 + 479 * index - 1395 == 0
+end
+char s:
+function (index)
+    n = 0
+    for i = 1, 7 do
+        n = n + i
+    end
+    return index == n
+end
+char t:
+function (index)
+    return index * index == 4
+end
+char u:
+function (index)
+    n = 120 / index
+    return n >= 4 and n <= 6 and n == math.floor(n)
+end
+char v:
+function (index)
+    return index + 1330 == 1337
+end
+char w:
+function (index)
+    fizz = index % 3 == 0
+    buzz = index % 5 == 0
+    pop  = index % 6 == 0
+    return fizz and buzz and not pop
+end
+char y:
+function (index)
+    return index ~= index;
+end
+char z:
+function (index)
+    return 2 * index > 3 * index;
+end
+char {:
+function (index)
+    return math.sqrt(index) == 2
+end
+char }:
+function (index)
+    s = "jctf{red_flags_and_fake_flags_form_an_equivalence_class}"
+    return index == string.find(s, 'm')
+end

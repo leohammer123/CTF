@@ -1,4 +1,4 @@
-def decrypt(text,s):
+def decrypt(text,s):# Caeser 
 	result = ""
 	for i in range(len(text)):
 		char = text[i]
@@ -8,6 +8,9 @@ def decrypt(text,s):
 		else:
 			result += chr((ord(char) + s - 97) % 26 + 97)
 	return result
+
+
+
 def get_english_score(input_bytes):
     character_frequencies = {
         'a': .08167, 'b': .01492, 'c': .02782, 'd': .04253,

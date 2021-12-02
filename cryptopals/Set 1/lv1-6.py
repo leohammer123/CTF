@@ -23,8 +23,7 @@ def hamming_score(ciphertext):
                 chunk1 = chunk[1]
                 distance_score = hamming_distance(str1=chunk0,str2=chunk1)/key_size
                 score.append(distance_score)
-                del chunk[0]
-                del chunk[1]
+                del chunk[0],chunk[1]
             except Exception as e:
                 break
         if len(score)==0:
