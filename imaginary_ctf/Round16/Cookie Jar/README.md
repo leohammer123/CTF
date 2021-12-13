@@ -128,7 +128,7 @@ for i in a:
     except Exception as e:
         #print(char)
         pass
-     ```
+ ```
      
 ## Step 4 : Assemble flag
 #### This is the eaziest part , it could even done by hand.
