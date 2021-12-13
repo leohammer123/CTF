@@ -46,7 +46,26 @@
 #### The response is some kind of lua code , and it would be use by luaj , luaj is a java package can run lua. Recive the return boolean value.
 # Step 2 : Get lua code
 ### It return different function while I was trying some different input. So I write a python script to try every possible character.
-!()[]
+```python
+import requests
+from lupa import LuaRuntime    
+
+lua = LuaRuntime(unpack_returned_tuples=True)    
+
+url = "https://cookie-jar.ictf.iciaran.com/"
+with open('log.output','w',encoding="utf-8") as f:
+    for r in range(256):
+        if chr(r) in '\n\r': continue
+        if not(chr(r).isprintable()) : continue
+        cookies = dict(char=chr(r))
+        re = requests.get(url,cookies=cookies)
+        if re.text.find('<g>')==-1 and re.text.find('Bad')==-1:#Ignore html code
+            f.write(f'char {chr(r)}:\n{re.text}')
+        try:
+            print(f'char {chr(r)} {re.text}')
+        except Exception as e:
+            print(e)
+````
 ## The result show some ofthe interesting thing.
 # case `
 ```lua
@@ -74,5 +93,65 @@ end
 #### As you can see , the code become hard to read , it take lot of time to do it by hand.
 # Step 3 : Get index value
 #### Python have a almost same package lupa to run lua , use a loop to iterate all possible index which is 0-35 , if it return true then the flag at that index is that character.
+```python
+from os import path
+from lupa import LuaRuntime    
+import lupa  
+
+lua = LuaRuntime(unpack_returned_tuples=True)    
+
+a = open('log.output','r',encoding='utf-8').read().split('char')
+for i in a:
+    try:
+        num = []# Use to store all index
+        char = i.replace('\n','').split(':')[0]
+        fc = i.split(':')[1]
+        lua_func = lua.eval(fc)# function define can't contain name 
+        
+        if char==" 5":# For bit32 doesn't work
+            
+            open('char.txt','a').write(str(char)+" "+"10"+"\n")
+            continue
+            
+            
+        for r in range(0,35):
+            
+            a = lua_func(r)
+            
+            if(a):
+                num.append(r)
+                
+  
+        if len(num)>0:
+            open('char.txt','a').write(str(char)+" "+' '.join(str(v) for v in num)+"\n")
+            
+    except Exception as e:
+        #print(char)
+        pass
+     ```
+     
 ## Step 4 : Assemble flag
 #### This is the eaziest part , it could even done by hand.
+```python
+flag =[None]*35
+index =0 
+text = open('Cookie Jar\\answer\char.txt','r').read().split('\n')
+flag[33] = "6"
+
+
+
+for i in text:
+    
+    char = i.split(' ')[1]
+    dex = i.split(' ')[2:]
+    
+    for n in dex:
+
+        flag[int(n)] = char
+        
+        
+print("".join(str(c) for c in flag))    
+
+
+# flag ictf{r3ver51n9_w17h0u7_full_s0urc6}
+```
