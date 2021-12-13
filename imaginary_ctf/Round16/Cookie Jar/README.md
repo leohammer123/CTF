@@ -1,7 +1,7 @@
 # Cookie jar
 # Step 1 : Decompile cookie.jar
 ### In this case, I use https://github.com/java-decompiler/jd-gui to decompile it, and get something like this.
-![https://github.com/leohammer123/CTF/blob/main/imaginary_ctf/Round16/Cookie%20Jar/picture/demo.png]()
+![image](https://github.com/leohammer123/CTF/blob/main/imaginary_ctf/Round16/Cookie%20Jar/picture/demo.png)
 ## Cookies.class have the check_flag function
 ```java
   public boolean checkFlag(String flag) {
