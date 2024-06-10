@@ -8,11 +8,11 @@ for i in range(0, len(plaintext)):
     key += chr(ord(plaintext[i]) ^ ord(decrypted_cookie[j]))
     
 
-print(f'{key}')# key = qw8J
+print(f'{key}')# key = eDWo
 
 plaintext = '{"showpassword":"yes", "bgcolor":"#ffffff"}'
 chipher = ''
-key = 'qw8J'
+key = 'eDWo'
 
 
 for i in range(0, len(plaintext)):
